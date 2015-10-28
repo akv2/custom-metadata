@@ -1191,6 +1191,11 @@ class custom_metadata_manager {
 
 		// make sure $value is an array
 		$value = (array) $value;
+		
+		// reverse array
+		if ( count($value) > 1 ) :
+			$value = array_reverse( $value );
+		endif;
 
 		$count = 1;
 		$container_class = sanitize_html_class( $field_slug );
